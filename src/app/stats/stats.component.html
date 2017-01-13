@@ -4,22 +4,22 @@
       <div class="panel panel-body" >
         <!-- Random Number -->
         <!-- CHANGE #1 - I moved your id into a span. I did this because I want to keep your label Winning Number but delete whats inside the number only. -->
-        Winning Number: <span id="randomNumber"></span>
+        Winning Number: <span id="randomNumber">{{winningNumber}}</span>
       </div>
     </div>
 
     <div class="col-md-2 col-md-offset-1 panel panel-default">
       <div class="panel-body">
           <!-- Your score -->
-        Score: <span id="score"><!-- score variable --></span>  
+        Score: <span id="score">{{score}}</span>  
       </div>
     </div>
 
     <div class="col-md-2 col-md-offset-1 panel panel-default">
       <div class="panel-body">
         <!-- Wins/Losses -->
-        <p>Wins: <span id="wins"></span></p>
-        <p>Losses: <span id="losses"></span></p>
+        <p>Wins: <span id="wins">{{wins}}</span></p>
+        <p>Losses: <span id="losses">{{losses}}</span></p>
       </div>
     </div>
   </div>

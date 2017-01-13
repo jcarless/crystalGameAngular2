@@ -1,5 +1,5 @@
 <div class="container">
   <app-instructions></app-instructions>
-  <app-stats></app-stats>
-  <app-buttons></app-buttons>
+  <app-stats [score]="score"></app-stats>
+  <app-buttons (score)="score"></app-buttons>
 </div>

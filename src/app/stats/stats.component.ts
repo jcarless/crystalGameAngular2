@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-stats',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatsComponent implements OnInit {
 
-  constructor() { }
+  wins = 0;
+  losses = 0;
+
+	private winningNumber = Math.floor((Math.random() * 100) + 1);
+
+	@Input() score:number;
+
+  constructor() { 
+  	
+  }
 
   ngOnInit() {
+    this.wins = 0;
+    this.losses = 0;
   }
 
 }
