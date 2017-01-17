@@ -15,7 +15,6 @@ export class StatsComponent implements OnInit {
 	@Input() score:number;
 
   constructor() { 
-  	
   }
 
   ngOnInit() {

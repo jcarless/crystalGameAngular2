@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-buttons',
@@ -17,19 +17,28 @@ export class ButtonsComponent implements OnInit {
 
 	greenValue = Math.floor((Math.random() * 10) + 1);
 
+  // @Input() score:number;
+
+  initialScore = 0;
+
+
+  @Output() score = new EventEmitter<number>();
+
+
   onClicked(value) {
-    this.score += value;
-    alert("score: " + this.score);
+    this.initialScore += value;
+    alert("score: " + this.initialScore);
+    this.score.emit(this.initialScore);
+
   }
 
-	@Output() score = new EventEmitter<number>();
+
 
   constructor() { 
   	console.log("red value: " + this.redValue);
   	console.log("blue value: " + this.blueValue);
   	console.log("yellow value: " + this.yellowValue);
   	console.log("green value: " + this.greenValue);
-  	console.log("score: " + this.score);
 
   }
 

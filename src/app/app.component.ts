@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-	score:number = 9;
+	constructor(){}
+
+	@Input() count:number = 0;
+
+
+	handleScore(score: number) {
+		console.log(score);
+
+		this.count = score
+
+  }
+
 
 }
